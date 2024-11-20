@@ -1,1 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.75em; /* 75% larger than default */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    flex: 1 1 30%; /* Default for desktop view */
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 0, 0.7); /* Example color */
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 1.25em; /* 25% larger than default */
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+    .section {
+        flex: 1 1 30%; /* 3 equal sections */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        flex: 1 1 45%; /* 2 sections in first row */
+    }
+
+    .section:nth-child(3) {
+        flex: 1 1 100%; /* 3rd section takes full width */
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .section {
+        flex: 1 1 100%; /* Full width for all sections */
+    }
+}
+
+/* Section Specific Background Colors */
+.section-chicken {
+    background-color: lightcoral;
+}
+
+.section-beef {
+    background-color: lightblue;
+}
+
+.section-sushi {
+    background-color: lightgreen;
+}
