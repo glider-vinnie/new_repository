@@ -1,1 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+}
 
+.tall-section {
+    height: 1000px; /* Set a tall height for scrolling */
+    background-color: #f8f8f8; /* Light background color */
+    padding: 20px;
+}
